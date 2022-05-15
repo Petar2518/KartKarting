@@ -37,7 +37,7 @@
 
 <!-- HTML HEADER -->
 
-<body class="grey lighten-4">
+<body class="green lighten-4">
     <!-- navigation menu -->
     <nav class="blue header z-depth-0">
         <div class="container">
