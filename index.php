@@ -39,7 +39,7 @@
         } else {
             $username = $_POST['username'];  
 
-            $query = "SELECT * FROM korisnik WHERE username = '$username'";    
+            $query = "SELECT * FROM korisnik WHERE korisnickoIme = '$username'";    
             $rezultat = mysqli_query($mysqli, $query);     
             $korisnici = mysqli_fetch_assoc($rezultat);       
             mysqli_free_result($rezultat);               
@@ -93,7 +93,7 @@
             $drzava = mysqli_real_escape_string($mysqli, $_POST['drzava']);
            
 
-            $query = "INSERT INTO korisnik(name, lastname, email, username, password, country)   
+            $query = "INSERT INTO korisnik(ime, prezime, email, korisnickoIme, password, drzava)   
                 VALUES ('$ime', '$prezime', '$email', '$username', '$password', '$drzava')";    
 
             if(mysqli_query($mysqli, $query)) {     

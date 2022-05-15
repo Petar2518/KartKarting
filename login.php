@@ -13,7 +13,7 @@
             $provera['username'] = "Neophodno je da unesete korisnicko ime! <br/>";  
         } else {
             $username = $_POST['username'];  
-            $query = "SELECT * FROM korisnik WHERE username = '$username'";   
+            $query = "SELECT * FROM korisnik WHERE korisnickoIme = '$username'";   
             $rezultat = mysqli_query($mysqli, $query);   
             $korisnici = mysqli_fetch_assoc($rezultat);    
             mysqli_free_result($rezultat);             
@@ -31,7 +31,7 @@
                 } else {
                     session_start();    
                     $_SESSION['name'] = $_POST['username'];   
-                    
+                    header('Location: index.php');
                 }
             }
         }
