@@ -54,6 +54,8 @@
         <a href="pocetna.php?user=<?php echo $korisnik; ?>" class="brand-logo brand-text">KartKarting</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down navul">
                 <li><?php echo $korisnik; ?></li>
+                <li><a href="dodavanje.php?user=<?php echo $korisnik;?>" class="btn brand z-depth-0">Dodaj termin</a></li>
+
                 <li><a href="login.php" class="btn brand z-depth-0">Logout</a></li>
             </ul>
         </div>
