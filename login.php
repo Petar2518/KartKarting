@@ -1,5 +1,6 @@
 <?php
-    
+    session_start();
+    unset($_SESSION["name"]);
     include('config/konekcija.php');
 
     $username = $password = "";  
@@ -29,9 +30,9 @@
                 if(strcmp($password, $korisnici['password'])) {    
                     $provera['password'] = "Pogresna lozinka! <br/>";  
                 } else {
-                    session_start();    
+                        
                     $_SESSION['name'] = $_POST['username'];   
-                    header('Location: pocetna.php?user='.$_SESSION['name']);
+                    header('Location: pocetna.php');
                 }
             }
         }
