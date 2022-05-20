@@ -1,4 +1,4 @@
-<!-- HTML FOOTER -->
+
 <footer class="section">
         <img src="images/logo.jpg" class="logo"><br>
         <p style="text-align:center;">

@@ -3,7 +3,7 @@
     <link rel="icon" href="images/logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style type="text/css">
-        /* CSS */
+   
         .header {
             background-color: #4797ca;
         }
@@ -35,10 +35,10 @@
     </style>
 </head>
 
-<!-- HTML HEADER -->
+
 
 <body class="green lighten-4">
-    <!-- navigation menu -->
+
     <nav class="blue header z-depth-0">
         <div class="container">
             <a href="<?php echo $_SERVER['PHP_SELF'] ?>" class="brand-logo brand-text">KartKarting</a>
