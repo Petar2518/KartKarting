@@ -1,20 +1,26 @@
 <?php
 
     include('config/konekcija.php');
-
-    if(isset($_GET['user'])) {  // getting the user that is logged in 
-        $username = mysqli_real_escape_string($mysqli, $_GET['user']);  // setting the user
-    }
+  
+    // if(isset($_GET['user'])) {  // getting the user that is logged in 
+    //     $username = mysqli_real_escape_string($mysqli, $_GET['user']);  // setting the user
+    // }
+    session_start();
+    $username=$_SESSION['name'];
 
 
 
 ?>
 <!DOCTYPE html>
 <html>
+<?php include 'design/header-ulogovan.php'; ?>	
+<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
 	<body>
 
 
-      <?php include 'design/header-ulogovan.php'; ?>
+      
 
 		
 			<div class="container">
