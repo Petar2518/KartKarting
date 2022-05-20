@@ -2,9 +2,7 @@
 
     include('config/konekcija.php');
   
-    // if(isset($_GET['user'])) {  // getting the user that is logged in 
-    //     $username = mysqli_real_escape_string($mysqli, $_GET['user']);  // setting the user
-    // }
+
     session_start();
     $username=$_SESSION['name'];
 

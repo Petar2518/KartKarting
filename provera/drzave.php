@@ -198,18 +198,18 @@
     );
 
     if(isset($_REQUEST['zahtev'])) {
-        $q = $_REQUEST['zahtev']; // setting parameter $q on the value that we typed in
-        $predlog = "";   // empty string for now (on the opening)
+        $q = $_REQUEST['zahtev']; 
+        $predlog = "";   
 
         if($q != "") {  
-            $q = strtolower($q);  // lowering everything for easier comparison
-            $len = strlen($q);   // length of the string we typed in
-            foreach($lista_drzava as $drzava) {   // going through every country looking for suggs
+            $q = strtolower($q);  
+            $len = strlen($q);   
+            foreach($lista_drzava as $drzava) {   
                 if(stristr($q, substr($drzava, 0, $len))) {   
                     if($predlog === "") {
                         $predlog = $drzava;
                     } else {
-                        $predlog .= ", $drzava";   // appending suggestions
+                        $predlog .= ", $drzava";   
                     }
                 }
             }
