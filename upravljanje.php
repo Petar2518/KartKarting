@@ -3,7 +3,7 @@
     include('config/konekcija.php');
 
     session_start();
-    $username=$_SESSION['name'];
+
     
 
 

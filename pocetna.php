@@ -4,7 +4,7 @@
   
 
     session_start();
-    $username=$_SESSION['name'];
+   
 
 
 
