@@ -15,7 +15,9 @@
     if($_GET['opcija'] == 'sport'){
         echo json_encode(Sport::vratiSve($mysqli));
     }
-
+    if($_GET['opcija'] == 'sort'){
+      echo json_encode(Termin::vratiSveSortirano($mysqli,$_GET['sort']));
+  }
   }
 
  ?>
