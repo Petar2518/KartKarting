@@ -28,7 +28,7 @@ $username=$_SESSION['name'];
       <section class="container grey-text">
       <h1 class="center">Dodaj termin</h1>
           <form method="POST" action="dodaj.php">
-          <input type="hidden" name="username" id="username" value=<?php echo $username?>>
+          
             <label for="rezervisao">Rezervisano na ime</label>
             <input type="text" class="form-control" required=true placeholder="Ime i prezime" name="rezervisao" id="rezervisao">
             <label for="datumRezervacije">Datum rezervacije</label>
