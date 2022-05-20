@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2022 at 03:49 PM
+-- Generation Time: May 20, 2022 at 04:12 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -45,7 +45,8 @@ CREATE TABLE `korisnik` (
 INSERT INTO `korisnik` (`korisnikID`, `ime`, `prezime`, `email`, `korisnickoIme`, `password`, `vreme_pravljenja`, `drzava`) VALUES
 (7, 'Petar', 'Milenkovic', 'pm20180025@student.fon.bg.ac.rs', 'petar', 'petar123', '2022-05-20 13:45:00', 'Serbia'),
 (8, 'Sofija', 'Davidovic', 'zoff@gmail.com', 'sofija', 'sofija123', '2022-05-20 13:45:30', 'Spain'),
-(9, 'Jovan', 'Markovic', 'jovan@gmail.com', 'jovan', 'jovan123', '2022-05-20 13:45:59', 'Montenegro');
+(9, 'Jovan', 'Markovic', 'jovan@gmail.com', 'jovan', 'jovan123', '2022-05-20 13:45:59', 'Montenegro'),
+(10, 'asd', 'asd', 'asd@asd.com', 'admin', 'admin123', '2022-05-20 13:59:57', 'Australia');
 
 -- --------------------------------------------------------
 
@@ -80,7 +81,7 @@ CREATE TABLE `termin2` (
   `rb` int(50) NOT NULL,
   `sportID` int(50) NOT NULL,
   `rezervisao` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `datumRezervacije` datetime NOT NULL,
+  `datumRezervacije` date NOT NULL,
   `cena` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -89,9 +90,9 @@ CREATE TABLE `termin2` (
 --
 
 INSERT INTO `termin2` (`terminID`, `rb`, `sportID`, `rezervisao`, `datumRezervacije`, `cena`) VALUES
-(44, 3, 2, 'Janko Milosevic', '2022-05-23 00:00:00', 5000),
-(45, 2, 3, 'Stefan Mandzukic', '2022-05-29 00:00:00', 3000),
-(46, 5, 1, 'Marko Nikolic', '2022-06-14 00:00:00', 10000);
+(44, 3, 2, 'Janko Milosevic', '2022-05-23', 5000),
+(45, 2, 3, 'Stefan Mandzukic', '2022-05-29', 4000),
+(46, 5, 1, 'Marko Nikolic', '2022-06-14', 10000);
 
 -- --------------------------------------------------------
 
@@ -150,7 +151,7 @@ ALTER TABLE `trajanje`
 -- AUTO_INCREMENT for table `korisnik`
 --
 ALTER TABLE `korisnik`
-  MODIFY `korisnikID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `korisnikID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `sport`
@@ -162,7 +163,7 @@ ALTER TABLE `sport`
 -- AUTO_INCREMENT for table `termin2`
 --
 ALTER TABLE `termin2`
-  MODIFY `terminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `terminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `trajanje`
